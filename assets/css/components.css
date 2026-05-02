@@ -1,0 +1,116 @@
+/* ═══════════════════════════════════════
+   CARDS & STATS
+═══════════════════════════════════════ */
+.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.stat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  transition: border-color var(--transition);
+}
+.stat-card:hover { border-color: var(--border-mid); }
+.stat-label { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.4px; }
+.stat-value { font-size: 28px; font-weight: 600; letter-spacing: -1px; }
+.stat-delta { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.stat-delta.up { color: var(--success); }
+.stat-delta.down { color: var(--danger); }
+.stat-icon {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+}
+.stat-icon svg { width: 18px; height: 18px; }
+.stat-icon.blue { background: rgba(79,142,247,0.15); color: var(--accent); }
+.stat-icon.green { background: rgba(52,211,153,0.15); color: var(--success); }
+.stat-icon.yellow { background: rgba(251,191,36,0.15); color: var(--warning); }
+.stat-icon.red { background: rgba(248,113,113,0.15); color: var(--danger); }
+
+/* ═══════════════════════════════════════
+   TABLES
+═══════════════════════════════════════ */
+.table-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.table-header {
+  display: flex; align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+}
+.table-title { font-size: 14px; font-weight: 600; flex: 1; }
+.search-input-wrap { position: relative; }
+.search-input {
+  padding: 7px 32px 7px 32px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 13px; outline: none;
+  transition: border-color var(--transition);
+  width: 220px;
+}
+.search-input:focus { border-color: var(--accent); }
+.search-icon {
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+  color: var(--text-muted); width: 14px; height: 14px;
+  pointer-events: none;
+}
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table th {
+  padding: 10px 16px;
+  background: var(--bg-raised);
+  font-size: 11px; font-weight: 600;
+  color: var(--text-muted);
+  text-align: left; text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.data-table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  vertical-align: middle;
+}
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: var(--bg-raised); }
+.avatar-sm {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600;
+  flex-shrink: 0;
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 8px;
+  border-radius: 99px;
+  font-size: 11px; font-weight: 500;
+}
+.chip.green  { background: rgba(52,211,153,0.12);  color: var(--success); }
+.chip.blue   { background: rgba(79,142,247,0.12);  color: var(--accent); }
+.chip.yellow { background: rgba(250,204,21,0.15);  color: #ca8a04; }
+.chip.red    { background: rgba(248,113,113,0.12); color: var(--danger); }
+.chip.orange { background: rgba(251,146,60,0.12);  color: #fb923c; }
+.chip.gray   { background: rgba(148,163,184,0.15); color: #94a3b8; }
+.chip.purple { background: rgba(167,139,250,0.15); color: #a78bfa; }
+
+.table-actions { display: flex; gap: 6px; }
+.action-btn {
+  width: 28px; height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+}
+.action-btn:hover { color: var(--text-primary); border-color: var(--border-mid); }
+.action-btn svg { width: 13px; height: 13px; }
+
+/* ═══════════════════════════════════════
